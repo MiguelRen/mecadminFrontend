@@ -1,4 +1,9 @@
 <script>
+import InputFormBox from '../components/InputFormBox.vue';
+import { ref } from 'vue';
+
+
+
 </script>
 
 <template>
@@ -11,7 +16,23 @@
             
         </div>
         <div class="form">
-            <p>Lorem ipsum dolor amet consectetur adipisicing elit. Nemo quibusdam illo in repudiandae ducimus eos sed maxime cum unde culpa ipsam dolores quod quia consequuntur quisquam omnis quos, quam assumenda?</p>
+            <div class="dataSpace">
+                <div class="branding">
+                    <img class="logo" src="@/assets/logo.svg" alt="">
+                    <h1 class=" companyTitle">Benny Companny</h1>
+                </div>
+                <div class="inputData">
+                    <h2>Ingresa en tu cuenta</h2>
+                    <input  class="userInput" type="text" placeholder="Usuario o Email"/>
+                    <input  class="userInput" type="password" placeholder="Contraseña"/>
+                    <button >Ingresar</button>
+                </div>
+                <div class="userStuffs">
+                    <a href=""> Registrarse</a>
+                    <a href="">Se te olvidó la contraseña?</a>
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -53,8 +74,82 @@
     max-width:  50%;
 }
 .form{
-    max-width: 75%;
+    width: 100%;
     background-color: white;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
+.dataSpace{
+    height: 80%;
+    width:80%; 
+    display: flex;
+    flex-direction:column;
+    align-items: start;
 
+    justify-content: space-between;
+}
+.logo{
+    display: inline;
+    height: 10vh;
+    width: 6vh;
+}
+.companyTitle{
+    display: block;
+    margin-left: 30px;
+    font-weight: 500;
+    font-style: bold;
+   
+    
+}
+.branding{
+    display:flex;
+    align-items: center;
+ 
+    
+}
+.inputData{
+  
+    font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  gap: 5%;
+
+}
+h2{
+    display:inline;
+}
+.userInput{
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(133, 133, 133);
+    height: 40%;
+    width: 100%;
+    margin: 5px 5px  10px 0px;
+}
+button{
+    color: white;
+    background-color: black;
+    width: 60% ;
+}
+.userStuffs{
+    margin-top:10px;
+    height: auto;
+    display:block;
+    justify-content: start;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+a:link,a:visited, a:active{
+   
+    display:block;
+    text-decoration: none;
+}
 </style>
